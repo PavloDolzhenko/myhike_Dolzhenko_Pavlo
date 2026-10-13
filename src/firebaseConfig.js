@@ -16,10 +16,10 @@ import { getAuth } from "firebase/auth";
 // Read Firebase configuration from Vite environment variables.
 // These are defined in your .env file as:
 //
-// VITE_FIREBASE_API_KEY=your-api-key
-// VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-// VITE_FIREBASE_PROJECT_ID=your-project-id
-// VITE_FIREBASE_APP_ID=your-app-id
+// VITE_FIREBASE_API_KEY="AIzaSyBmxOnSwIFSowcn7vjL18X6GHxzme2Gxhc"
+// VITE_FIREBASE_AUTH_DOMAIN="fir-f12b7.firebaseapp.com"
+// VITE_FIREBASE_PROJECT_ID="fir-f12b7"
+// VITE_FIREBASE_APP_ID="1:428960663621:web:ec72fecf2532f053dffb2c"
 //
 // ⚠️ Note: Vite only exposes environment variables that start with "VITE_"
 // ---------------------------------------------------------
