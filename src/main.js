@@ -2,15 +2,7 @@
 // The function we want to use is called "onAuthReady" which returns the login state
 import { onAuthReady } from "./authentication.js";
 import { db } from "./firebaseConfig.js";
-import {
-    doc,
-    onSnapshot,
-    getDoc,
-    collection,
-    getDocs,
-    addDoc,
-    serverTimestamp,
-} from "firebase/firestore";
+import {doc,onSnapshot,getDoc,collection,getDocs,addDoc,serverTimestamp,} from "firebase/firestore";
 
 // Function to fetch the signed-in user's name and display it in the UI
 function showName() {
@@ -32,9 +24,9 @@ function showName() {
         const userDoc = await getDoc(doc(db, "users", user.uid));
 
         // Determine which name to display:
-        const name = userDoc.exists()            // 1️⃣ Use Firestore name if document exists
-            ? userDoc.data().name                // 2️⃣ Otherwise fallback to Firebase displayName
-            : user.displayName || user.email;    // 3️⃣ Otherwise fallback to email
+        const name = userDoc.exists()
+            ? userDoc.data().name
+            : user.displayName || user.email;
 
         // If the DOM element exists, update its text using a template literal to add "!"
         if (nameElement) {

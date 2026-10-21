@@ -16,13 +16,10 @@ import {
 } from './authentication.js';
 
 
-// --- Login and Signup Page ---
-// Handles toggling between Login/Signup views and form submits
-// using plain DOM APIs for simplicity and maintainability.
-
+// Login and Signup Page
 
 function initAuthUI() {
-    // --- DOM Elements ---
+    // DOM Elements
     const alertEl = document.getElementById('authAlert');
     const loginView = document.getElementById('loginView');
     const signupView = document.getElementById('signupView');
@@ -32,13 +29,11 @@ function initAuthUI() {
     const signupForm = document.getElementById('signupForm');
     const redirectUrl = 'main.html';
 
-    // --- Helper Functions ---
-    // Toggle element visibility
+    // Helper Functions
     function setVisible(el, visible) {
         el.classList.toggle('d-none', !visible);
     }
 
-    // Show error message with accessibility and auto-hide
     let errorTimeout;
     function showError(msg) {
         alertEl.textContent = msg || '';
@@ -60,7 +55,7 @@ function initAuthUI() {
         if (submitBtn) submitBtn.disabled = disabled;
     }
 
-    // --- Event Listeners ---
+    // Event Listeners
     // Toggle buttons
     toSignupBtn?.addEventListener('click', (e) => {
         e.preventDefault();
@@ -124,5 +119,5 @@ function initAuthUI() {
     });
 }
 
-// --- Initialize UI on DOMContentLoaded ---
+// Initialize UI on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', initAuthUI);
